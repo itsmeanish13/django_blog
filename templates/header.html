@@ -1,0 +1,20 @@
+<!-- header.html -->
+<header class="main-header">
+  <div class="logo">
+    <h1>🖤 BLACK AND WHITE</h1>
+  </div>
+  <nav class="links">
+    <a href="{% url 'index' %}">Home</a>
+
+    <a href="{% url 'about' %}">About</a>
+    <a href="{% url 'contact' %}">Contact</a>
+    <!-- {% comment %} {% if user.is_authenticated %} {% endcomment %}
+    <form method="post" style="display: inline">
+      {% csrf_token %}
+      <button type="submit" class="btn">Logout</button>
+    </form> -->
+    <!-- {% comment %} {% else %}
+    <!-- <a href="{% url 'account_login' %}">Login</a> -->
+    <!-- {% endif %} {% endcomment %}  -->
+  </nav>
+</header>
