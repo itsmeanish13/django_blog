@@ -1,25 +1,4 @@
 <!-- index.html -->
-{% extends 'base.html' %} {% load static %} {% block main_content %}
-<div class="container">
-  <div class="column">
-    <div class="column_left">
-      <h2>Side</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
-
-      <h2>Main Content</h2>
-      <p>... Your content here ...</p>
-    </div>
-
-    <div class="column_right">
-      <h2>BLOG</h2>
-      <p>A blog is an online journal...</p>
-      <img
-        src="{% static 'image/images.jpg' %}"
-        alt="Sample Image"
-        class="image"
-      />
-      <input type="text" placeholder="Enter your content" />
-    </div>
-  </div>
-</div>
+{% extends 'base.html' %} {% load static %} {% block start %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}" />
 {% endblock %}
