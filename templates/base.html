@@ -22,7 +22,18 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
 
           <h2>Main Content</h2>
-          <p>... Your content here ...</p>
+          <ul>
+            {% for post in post_detail %}
+            <li>
+              <h3>{{ post.title }}</h3>
+              <p><strong>Author:</strong> {{ post.author }}</p>
+              <p><strong>Category:</strong> {{ post.category.name }}</p>
+              <p><strong>Date:</strong> {{ post.created_at|date:"F d, Y" }}</p>
+              <p>{{ post.bio|truncatewords:30 }}</p>
+              <a href="#">Read more</a>
+            </li>
+            {% endfor %}
+          </ul>
         </div>
 
         <div class="column_right">

@@ -1,0 +1,13 @@
+{%include 'header.html' %} {% load static %}
+<ul>
+  {% for post in post_detail %}
+  <li>
+    <h3>{{ post.title }}</h3>
+    <p><strong>Author:</strong> {{ post.author }}</p>
+    <p><strong>Category:</strong> {{ post.category.name }}</p>
+    <p><strong>Date:</strong> {{ post.created_at|date:"F d, Y" }}</p>
+    <p>{{ post.content|truncatewords:30 }}</p>
+    <a href="{% url 'bio' post.id %}">Read more</a>
+  </li>
+  {% endfor %}
+</ul>
